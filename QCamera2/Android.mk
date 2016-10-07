@@ -65,12 +65,12 @@ LOCAL_C_INCLUDES += \
 
 ifeq (1,$(filter 1,$(shell echo "$$(( $(PLATFORM_SDK_VERSION) >= 24 ))" )))
 LOCAL_C_INCLUDES += \
-        hardware/qcom/media/msm8974/libstagefrighthw \
-        hardware/qcom/media/msm8974/mm-core/inc
+        $(call project-path-for,qcom-media)/msm8974/libstagefrighthw \
+        $(call project-path-for,qcom-media)/msm8974/mm-core/inc
 else
 LOCAL_C_INCLUDES += \
-        hardware/qcom/media/libstagefrighthw \
-        hardware/qcom/media/mm-core/inc
+        $(call project-path-for,qcom-media)/libstagefrighthw \
+        $(call project-path-for,qcom-media)/mm-core/inc
 endif
 
 ifeq ($(TARGET_COMPILE_WITH_MSM_KERNEL),true)
