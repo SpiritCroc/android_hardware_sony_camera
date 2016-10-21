@@ -63,8 +63,8 @@ LOCAL_C_INCLUDES += \
 
 ifeq (1,$(filter 1,$(shell echo "$$(( $(PLATFORM_SDK_VERSION) >= 24 ))" )))
 LOCAL_C_INCLUDES += \
-        $(call project-path-for,qcom-media)/msm8974/libstagefrighthw \
-        $(call project-path-for,qcom-media)/msm8974/mm-core/inc
+        $(call project-path-for,qcom-media)/libstagefrighthw \
+        $(call project-path-for,qcom-media)/mm-core/inc
 else
 LOCAL_C_INCLUDES += \
         $(call project-path-for,qcom-media)/default/libstagefrighthw \
